@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="d-flex w-100 ">
+        <div class="container-1 w-25" >
+            <form action="/create/dojo" method="POST">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <input type="submit" value="Create Dojo">
+            </form>
+        </div>
+        <div class="container-1 w-25" >
+            <h2>All Dojos</h2>
+            <ul>
+            {% for dojo in all_dojos %}
+            <li><a href="/dojo_show/{{dojo.id}}">{{dojo.name}}</a></li>
+            {%endfor%}
+            </ul>
+            <a href="/ninjas/create" class="btn-btn primary text-center"> Add Ninja</a>
+            
+        </div>
+    </div>
+        
+</body>
+</html>
+

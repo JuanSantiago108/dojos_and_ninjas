@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+<h2>Edit Your form</h2>
+    <div class="container col-2" >
+
+    <form action="/user_form/edit/{{one_user.id}}" method="POST">
+        
+
+            <label for="first_name">First name:</label>
+            <input type="text" id="first_name" name="first_name" value="{{one_user.first_name}}" placeholder="{{one_user.first_name}}" >
+
+            <label for="last_name">Last name:</label>
+            <input type="text" id="last_name" name="last_name"value="{{one_user.last_name}}" placeholder="{{one_user.last_name}}">
+
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" value ="{{one_user.email}}"
+            placeholder="{{one_user.email}}">
+
+            <input type="submit" value="Update User">
+
+    </form>
+    </div>
+    <a href="/all_users" class="btn-btn-info">All Users</a>
+    <a href="/user/{{one_user.id}}" class="btn-btn-primary" >Show This User </a>
+
+
+</body>
+</html>
